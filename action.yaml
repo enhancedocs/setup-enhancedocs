@@ -1,0 +1,12 @@
+name: EnhanceDocs Github Action
+description: 'Setup EnhanceDocs CLI in your Github Actions workflow.'
+author: EnhanceDocs
+
+inputs:
+  api-key:
+    description: 'Your EnhanceDocs Secret API Key.'
+    required: true
+
+runs:
+  using: 'node16'
+  main: 'index.js'
