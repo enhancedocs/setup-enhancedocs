@@ -14,3 +14,7 @@ runs:
       shell: bash
     - run: echo "ENHANCEDOCS_API_KEY=${{ inputs.api-key }}" >> $GITHUB_ENV
       shell: bash
+
+branding:
+  icon: 'book'
+  color: 'blue'
