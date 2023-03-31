@@ -8,5 +8,7 @@ inputs:
     required: true
 
 runs:
-  using: 'node16'
-  main: 'index.js'
+  using: "composite"
+  steps:
+    - run: npm install -g enhancedocs@0.3.0
+      shell: bash
