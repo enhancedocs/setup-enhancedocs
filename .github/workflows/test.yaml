@@ -21,4 +21,4 @@ jobs:
         with:
           api-key: ${{ secrets.ENHANCEDOCS_API_KEY }}
 
-      - run: enhancedocs --version
+      - run: env
