@@ -10,7 +10,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: npm install -g enhancedocs@0.3.0
+    - run: npm install -g enhancedocs@0.4.0
       shell: bash
     - run: echo "ENHANCEDOCS_API_KEY=${{ inputs.api-key }}" >> $GITHUB_ENV
       shell: bash

@@ -10,7 +10,7 @@ steps:
     uses: actions/checkout@v3
 
   - name: Install EnhanceDocs CLI
-    uses: enhancedocs/enhancedocs-github-action@0.0.2
+    uses: enhancedocs/enhancedocs-github-action@0.0.3
     with:
       # More about EnhanceDocs Secret API Key: https://docs.enhancedocs.com/security/api-keys
       api-key: ${{ secrets.ENHANCEDOCS_API_KEY }}
