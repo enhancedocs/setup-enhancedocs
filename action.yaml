@@ -6,11 +6,15 @@ inputs:
   api-key:
     description: 'Your EnhanceDocs Secret API Key.'
     required: true
+  cli-version:
+    description: 'EnhanceDocs CLI version. A value of `latest` will install the latest version of EnhanceDocs CLI. Defaults to `latest`.'
+    default: "latest"
+    required: false
 
 runs:
   using: "composite"
   steps:
-    - run: npm install -g enhancedocs@0.4.0
+    - run: npm install -g enhancedocs@${{ inputs.cli-version }}
       shell: bash
     - run: echo "ENHANCEDOCS_API_KEY=${{ inputs.api-key }}" >> $GITHUB_ENV
       shell: bash
