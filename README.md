@@ -19,5 +19,5 @@ steps:
     run: enhancedocs build docs
 
   - name: Pushish Docs
-    run: enhancedocs publish
+    run: enhancedocs publish <project_id>
 ```
