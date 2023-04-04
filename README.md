@@ -18,8 +18,8 @@ steps:
       cli-version: 0.4.0
   
   - name: Build Docs
-    run: enhancedocs build docs
+    run: enhancedocs build <docs_path>
 
   - name: Pushish Docs
-    run: enhancedocs publish <project_id>
+    run: enhancedocs push <project_id>
 ```
