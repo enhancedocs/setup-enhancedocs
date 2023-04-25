@@ -1,6 +1,6 @@
-# enhancedocs-github-action
+# setup-enhancedocs
 
-The `enhancedocs/enhancedocs-github-action` action is minimal github action that sets up EnhanceDocs CLI in your GitHub Actions.
+The `enhancedocs/setup-enhancedocs` action is minimal github action that sets up EnhanceDocs CLI in your GitHub Actions.
 
 ## Usage
 
@@ -10,7 +10,7 @@ steps:
     uses: actions/checkout@v3
 
   - name: Install EnhanceDocs CLI
-    uses: enhancedocs/enhancedocs-github-action@0.1.0
+    uses: enhancedocs/setup-enhancedocs@0.1.0
     with:
       # More about EnhanceDocs Secret API Key: https://docs.enhancedocs.com/security/api-keys
       api-key: ${{ secrets.ENHANCEDOCS_API_KEY }}
