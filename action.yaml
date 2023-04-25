@@ -1,4 +1,4 @@
-name: EnhanceDocs Github Action
+name: "Setup EnhanceDocs"
 description: 'Setup EnhanceDocs CLI in your Github Actions workflow.'
 author: EnhanceDocs
 
