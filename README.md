@@ -10,12 +10,12 @@ steps:
     uses: actions/checkout@v3
 
   - name: Install EnhanceDocs CLI
-    uses: enhancedocs/setup-enhancedocs@v0.1.2
+    uses: enhancedocs/setup-enhancedocs@v0.1.3
     with:
       # More about EnhanceDocs Secret API Key: https://docs.enhancedocs.com/security/api-keys
       api-key: ${{ secrets.ENHANCEDOCS_API_KEY }}
-      # https://www.npmjs.com/package/enhancedocs version. (Not required); Defaults to `latest` if not provided
-      cli-version: 0.4.0
+      # https://pypi.org/project/enhancedocs/#history version. (Not required); Defaults to `latest` if not provided
+      cli-version: latest
   
   - name: Build Docs
     run: enhancedocs build <docs_path>

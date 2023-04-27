@@ -5,7 +5,7 @@ author: EnhanceDocs
 inputs:
   api-key:
     description: 'Your EnhanceDocs Secret API Key.'
-    required: true
+    required: false
   cli-version:
     description: 'EnhanceDocs CLI version. A value of `latest` will install the latest version of EnhanceDocs CLI. Defaults to `latest`.'
     default: "latest"
@@ -24,6 +24,7 @@ runs:
       if: ${{ inputs.cli-version != 'latest' }}
       shell: bash
     - run: echo "ENHANCEDOCS_API_KEY=${{ inputs.api-key }}" >> $GITHUB_ENV
+      if: ${{ inputs.api-key }}
       shell: bash
 
 branding:
