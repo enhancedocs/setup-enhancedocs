@@ -15,10 +15,10 @@ runs:
   using: "composite"
   steps:
     - run: pip install enhancedocs
-      if: ${{ inputs.cli-version == "latest" }}
+      if: ${{ inputs.cli-version == 'latest' }}
       shell: bash
     - run: pip install enhancedocs==${{ inputs.cli-version }}
-      if: ${{ inputs.cli-version != "latest" }}
+      if: ${{ inputs.cli-version != 'latest' }}
       shell: bash
     - run: echo "ENHANCEDOCS_API_KEY=${{ inputs.api-key }}" >> $GITHUB_ENV
       shell: bash
