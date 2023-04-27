@@ -14,7 +14,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: npm install -g enhancedocs@${{ inputs.cli-version }}
+    - run: pip install enhancedocs==${{ inputs.cli-version }}
       shell: bash
     - run: echo "ENHANCEDOCS_API_KEY=${{ inputs.api-key }}" >> $GITHUB_ENV
       shell: bash
