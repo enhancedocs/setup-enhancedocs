@@ -1,0 +1,32 @@
+name: "Setup EnhanceDocs"
+description: 'Setup EnhanceDocs CLI in your Github Actions workflow.'
+author: EnhanceDocs
+
+inputs:
+  api-key:
+    description: 'Your EnhanceDocs Secret API Key.'
+    required: false
+  cli-version:
+    description: 'EnhanceDocs CLI version. A value of `latest` will install the latest version of EnhanceDocs CLI. Defaults to `latest`.'
+    default: "latest"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    - run: python3 -m pip install enhancedocs
+      if: ${{ inputs.cli-version == 'latest' }}
+      shell: bash
+    - run: python3 -m pip install enhancedocs==${{ inputs.cli-version }}
+      if: ${{ inputs.cli-version != 'latest' }}
+      shell: bash
+    - run: echo "ENHANCEDOCS_API_KEY=${{ inputs.api-key }}" >> $GITHUB_ENV
+      if: ${{ inputs.api-key }}
+      shell: bash
+
+branding:
+  icon: 'book'
+  color: 'blue'
